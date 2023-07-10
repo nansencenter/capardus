@@ -1,0 +1,916 @@
+@prefix : <http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/> .
+
+<http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework> rdf:type owl:Ontology ;
+                                                                            rdfs:comment "Preliminary version of CAPARDUS Arctic Standards Framework Model Ontology.  Subsequent versions will be developed through community engagement with initiatives such as the Polar to Global Interoperability Hackathon.  Through this process new entities will be added to the model, existing entities enhanced, and the model modified to reflect a community understanding of Arctic standards." ;
+                                                                            rdfs:label "CAPARDUS Arctic Standards Framework Model" ;
+                                                                            rdfs:seeAlso "https://capardus.nersc.no/" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/adopts
+:adopts rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/funds
+:funds rdf:type owl:ObjectProperty ;
+       owl:inverseOf :isFundedBy .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/isFundedBy
+:isFundedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/isMemberOf
+:isMemberOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/isPartner
+:isPartner rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/isPublishedBy
+:isPublishedBy rdf:type owl:ObjectProperty ;
+               owl:inverseOf :publishes .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/publishes
+:publishes rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ArcticSafety
+:ArcticSafety rdf:type owl:Class ;
+              rdfs:subClassOf :ArcticStandardsFramework .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ArcticStandardsFramework
+:ArcticStandardsFramework rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/AtmosphericDataStandard
+:AtmosphericDataStandard rdf:type owl:Class ;
+                         rdfs:subClassOf :DataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/BestPractice
+:BestPractice rdf:type owl:Class ;
+              rdfs:subClassOf :Standard ;
+              rdfs:label "Best Practice" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/CitizenScienceProgram
+:CitizenScienceProgram rdf:type owl:Class ;
+                       rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ClimateConventions
+:ClimateConventions rdf:type owl:Class ;
+                    rdfs:subClassOf :ObservingStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/CommonPractice
+:CommonPractice rdf:type owl:Class ;
+                rdfs:subClassOf :Standard ;
+                rdfs:label "Common Practice" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/CommunityBasedObservingProgram
+:CommunityBasedObservingProgram rdf:type owl:Class ;
+                                rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Convention
+:Convention rdf:type owl:Class ;
+            rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/CrossCuttingThemes
+:CrossCuttingThemes rdf:type owl:Class ;
+                    rdfs:subClassOf :ArcticStandardsFramework .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataAccessStandard
+:DataAccessStandard rdf:type owl:Class ;
+                    rdfs:subClassOf :DataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataCenter
+:DataCenter rdf:type owl:Class ;
+            rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataCollaborationBody
+:DataCollaborationBody rdf:type owl:Class ;
+                       rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataCoordinationBody
+:DataCoordinationBody rdf:type owl:Class ;
+                      rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataFunder
+:DataFunder rdf:type owl:Class ;
+            rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataGovernanceBody
+:DataGovernanceBody rdf:type owl:Class ;
+                    rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataPlatform
+:DataPlatform rdf:type owl:Class ;
+              rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataPolicyBody
+:DataPolicyBody rdf:type owl:Class ;
+                rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataPractitioner
+:DataPractitioner rdf:type owl:Class ;
+                  rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataPrinciple
+:DataPrinciple rdf:type owl:Class ;
+               rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataProvider
+:DataProvider rdf:type owl:Class ;
+              rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataStandard
+:DataStandard rdf:type owl:Class ;
+              rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataStandardsBody
+:DataStandardsBody rdf:type owl:Class ;
+                   rdfs:subClassOf :PolarDataEcosystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DataSystem
+:DataSystem rdf:type owl:Class ;
+            rdfs:subClassOf :ArcticStandardsFramework .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EssentialVariable
+:EssentialVariable rdf:type owl:Class ;
+                   rdfs:subClassOf :ObservingStandard ,
+                                   :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Ethic
+:Ethic rdf:type owl:Class ;
+       rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ForecastingConventions
+:ForecastingConventions rdf:type owl:Class ;
+                        rdfs:subClassOf :ObservingStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/FormalConvention
+:FormalConvention rdf:type owl:Class ;
+                  rdfs:subClassOf :Standard ;
+                  rdfs:label "Formal Convention" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GeospatialDataStandard
+:GeospatialDataStandard rdf:type owl:Class ;
+                        rdfs:subClassOf :DataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GoodPractice
+:GoodPractice rdf:type owl:Class ;
+              rdfs:subClassOf :Standard ;
+              rdfs:label "Good Practice" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Governance
+:Governance rdf:type owl:Class ;
+            rdfs:subClassOf :CrossCuttingThemes ;
+            rdfs:label "Governance" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GovernanceBody
+:GovernanceBody rdf:type owl:Class ;
+                rdfs:subClassOf :Governance ;
+                rdfs:label "Governance Body" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Guidlne
+:Guidlne rdf:type owl:Class ;
+         rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/HazardResponse
+:HazardResponse rdf:type owl:Class ;
+                rdfs:subClassOf :ArcticSafety .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/IndigenousGovernanceBody
+:IndigenousGovernanceBody rdf:type owl:Class ;
+                          rdfs:subClassOf :Governance .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/IndigenousResearch
+:IndigenousResearch rdf:type owl:Class ;
+                    rdfs:subClassOf :CrossCuttingThemes ;
+                    rdfs:label "Indigenous Research" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/IndigenousResearchBody
+:IndigenousResearchBody rdf:type owl:Class ;
+                        rdfs:subClassOf :IndigenousResearch .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/InformalAgreement
+:InformalAgreement rdf:type owl:Class ;
+                   rdfs:subClassOf :Standard ;
+                   rdfs:label "Informal Agreement" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/InternationalLaw
+:InternationalLaw rdf:type owl:Class ;
+                  rdfs:subClassOf :Standard ;
+                  rdfs:label "International Law" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/InternationalStandard
+:InternationalStandard rdf:type owl:Class ;
+                       rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/InteroperabilityStandard
+:InteroperabilityStandard rdf:type owl:Class ;
+                          rdfs:subClassOf :DataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/MetadataStandard
+:MetadataStandard rdf:type owl:Class ;
+                  rdfs:subClassOf :DataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Method
+:Method rdf:type owl:Class ;
+        rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/NationalLaw
+:NationalLaw rdf:type owl:Class ;
+             rdfs:subClassOf :Standard ;
+             rdfs:label "National Law" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Norm
+:Norm rdf:type owl:Class ;
+      rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ObservingCoordinationBody
+:ObservingCoordinationBody rdf:type owl:Class ;
+                           rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ObservingFramework
+:ObservingFramework rdf:type owl:Class ;
+                    rdfs:subClassOf :CrossCuttingThemes ,
+                                    :ObservingSystem ;
+                    rdfs:label "Observing Framework" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ObservingPrinciple
+:ObservingPrinciple rdf:type owl:Class ;
+                    rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ObservingProgram
+:ObservingProgram rdf:type owl:Class ;
+                  rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ObservingReadinessLevel
+:ObservingReadinessLevel rdf:type owl:Class ;
+                         rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ObservingStandard
+:ObservingStandard rdf:type owl:Class ;
+                   rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ObservingSystem
+:ObservingSystem rdf:type owl:Class ;
+                 rdfs:subClassOf :ArcticStandardsFramework .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ObservingTechnology
+:ObservingTechnology rdf:type owl:Class ;
+                     rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/OperationaSafeyBody
+:OperationaSafeyBody rdf:type owl:Class ;
+                     rdfs:subClassOf :SafetyBody .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Operations
+:Operations rdf:type owl:Class ;
+            rdfs:subClassOf :ArcticSafety .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/PolarDataEcosystem
+:PolarDataEcosystem rdf:type owl:Class ;
+                    rdfs:subClassOf :DataSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Policy
+:Policy rdf:type owl:Class ;
+        rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/PreservationStandard
+:PreservationStandard rdf:type owl:Class ;
+                      rdfs:subClassOf :DataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ReuseStandard
+:ReuseStandard rdf:type owl:Class ;
+               rdfs:subClassOf :DataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/SafetyBody
+:SafetyBody rdf:type owl:Class ;
+            rdfs:subClassOf :ArcticSafety .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Scale
+:Scale rdf:type owl:Class ;
+       rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Shipping
+:Shipping rdf:type owl:Class ;
+          rdfs:subClassOf :ArcticSafety .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ShippingSafetyBody
+:ShippingSafetyBody rdf:type owl:Class ;
+                    rdfs:subClassOf :SafetyBody .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/SocialScienceDataStandard
+:SocialScienceDataStandard rdf:type owl:Class ;
+                           rdfs:subClassOf :DataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Specification
+:Specification rdf:type owl:Class ;
+               rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Standard
+:Standard rdf:type owl:Class ;
+          rdfs:subClassOf :ArcticStandardsFramework .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/StandardOperatingPractice
+:StandardOperatingPractice rdf:type owl:Class ;
+                           rdfs:subClassOf :Standard ;
+                           rdfs:label "Standard Operating Practice" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Time
+:Time rdf:type owl:Class ;
+      rdfs:subClassOf :ObservingSystem .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/TourismCoordinationBody
+:TourismCoordinationBody rdf:type owl:Class ;
+                         rdfs:subClassOf :Toursim .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Toursim
+:Toursim rdf:type owl:Class ;
+         rdfs:subClassOf :ArcticSafety .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/Treaty
+:Treaty rdf:type owl:Class ;
+        rdfs:subClassOf :Standard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/WebStandard
+:WebStandard rdf:type owl:Class ;
+             rdfs:subClassOf :DataStandard .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/AECO
+:AECO rdf:type owl:NamedIndividual ,
+               :TourismCoordinationBody ;
+      rdfs:label "Association of Arctic Expedition Cruise Operators" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/AMAP
+:AMAP rdf:type owl:NamedIndividual ,
+               :ObservingCoordinationBody ,
+               :ObservingProgram ;
+      rdfs:label "Arctic Monitoring and Assessment Programme" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/APS
+:APS rdf:type owl:NamedIndividual ,
+              :DataPlatform ,
+              :ObservingCoordinationBody ;
+     rdfs:label "Arctic Practices System" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ARCMAP
+:ARCMAP rdf:type owl:NamedIndividual ,
+                 :DataPlatform ;
+        rdfs:label "Marine data in the Arctic: From mapping to knowledge" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ASM
+:ASM rdf:type owl:NamedIndividual ,
+              :GovernanceBody ;
+     rdfs:label "Arctic Science Ministerial" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ArcGOOS
+:ArcGOOS rdf:type owl:NamedIndividual ,
+                  :ObservingCoordinationBody ,
+                  :ObservingProgram ;
+         rdfs:label "Arctic Region Component of the Global Ocean Observing System" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ArcticDataCommittee
+:ArcticDataCommittee rdf:type owl:NamedIndividual ,
+                              :DataCoordinationBody ;
+                     :isMemberOf :IASC ;
+                     rdfs:label "Arctic Data Committee" ;
+                     rdfs:seeAlso "https://arcticdc.org" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ArcticNet
+:ArcticNet rdf:type owl:NamedIndividual ,
+                    :DataGovernanceBody .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/CAFF
+:CAFF rdf:type owl:NamedIndividual ,
+               :ObservingCoordinationBody ;
+      rdfs:label "Conservation of Arctic Flora and Fauna (Arctic Council working group)" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/CARE
+:CARE rdf:type owl:NamedIndividual ,
+               :DataPrinciple .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/CF
+:CF rdf:type owl:NamedIndividual ,
+             :AtmosphericDataStandard ;
+    rdfs:label "Climate and Forecasting Conventions" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DAP
+:DAP rdf:type owl:NamedIndividual ,
+              :DataAccessStandard ;
+     rdfs:label "Data Access Protocol" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DCAT
+:DCAT rdf:type owl:NamedIndividual ,
+               :MetadataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DDI
+:DDI rdf:type owl:NamedIndividual ,
+              :SocialScienceDataStandard ;
+     rdfs:label "Data Documentation Initiative" ;
+     rdfs:seeAlso "https://ddialliance.org/" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/DIF
+:DIF rdf:type owl:NamedIndividual ,
+              :MetadataStandard ;
+     rdfs:label "Directory Interchange Format" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EAV
+:EAV rdf:type owl:NamedIndividual ,
+              :EssentialVariable ;
+     rdfs:label "Essential Arctic Variables" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EC
+:EC rdf:type owl:NamedIndividual ,
+             :DataFunder ,
+             :GovernanceBody ;
+    rdfs:label "European Commission" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ECV
+:ECV rdf:type owl:NamedIndividual ,
+              :EssentialVariable ;
+     rdfs:label "Essential Climate Variables" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EMB
+:EMB rdf:type owl:NamedIndividual ,
+              :ObservingProgram ;
+     rdfs:label "European Marine Board" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EOOS
+:EOOS rdf:type owl:NamedIndividual ,
+               :ObservingProgram ;
+      rdfs:label "European Ocean Observing System" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EOV
+:EOV rdf:type owl:NamedIndividual ,
+              :EssentialVariable ,
+              :ObservingFramework ;
+     rdfs:label "Essential Ocean Variables" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EPOS
+:EPOS rdf:type owl:NamedIndividual ,
+               :ObservingProgram ;
+      rdfs:label "European Plate Observing System" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EPPR
+:EPPR rdf:type owl:NamedIndividual ,
+               :OperationaSafeyBody ;
+      rdfs:label "Emergency Prevention, Preparedness and Response (Arctic Council working group)" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ERIC
+:ERIC rdf:type owl:NamedIndividual ,
+               :DataCollaborationBody ;
+      rdfs:label "European Research Infrastructure Consortium" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ESA
+:ESA rdf:type owl:NamedIndividual ,
+              :DataFunder ,
+              :DataProvider ;
+     :funds :PolartTEP ;
+     rdfs:label "European Space Agency" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EuroGOOS
+:EuroGOOS rdf:type owl:NamedIndividual ,
+                   :ObservingFramework .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/EuropeanCommission
+:EuropeanCommission rdf:type owl:NamedIndividual ,
+                             :DataFunder ,
+                             :DataProvider ;
+                    rdfs:label "European Commission" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/FAIR
+:FAIR rdf:type owl:NamedIndividual ,
+               :DataPrinciple ;
+      rdfs:label "Findable, Acciessible, Interoperable, Reusable" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/FOO
+:FOO rdf:type owl:NamedIndividual ,
+              :ObservingFramework ;
+     rdfs:label "Framework for Ocean Observing" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GAIAGLIM
+:GAIAGLIM rdf:type owl:NamedIndividual ,
+                   :ObservingProgram ;
+          rdfs:label "Gap Analysis for Integrated Atmospheric ECV ClImate Monitoring" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GCW
+:GCW rdf:type owl:NamedIndividual ,
+              :DataCoordinationBody ,
+              :DataPlatform ,
+              :ObservingProgram ;
+     rdfs:label "Global Cryosphere Watch" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GEO
+:GEO rdf:type owl:NamedIndividual ,
+              :DataPlatform ,
+              :DataPolicyBody ,
+              :DataStandardsBody ,
+              :ObservingProgram ;
+     rdfs:label "Group on Earth Observations" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GEOBON
+:GEOBON rdf:type owl:NamedIndividual ,
+                 :ObservingProgram ;
+        rdfs:label "Group on Earth Observations Biodiversity Observation Network" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GEOCRI
+:GEOCRI rdf:type owl:NamedIndividual ,
+                 :DataCoordinationBody ,
+                 :ObservingProgram ;
+        rdfs:label "GEO Cold Regions Initiative" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GML
+:GML rdf:type owl:NamedIndividual ,
+              :GeospatialDataStandard ;
+     rdfs:label "GML" ;
+     rdfs:seeAlso "https://www.ogc.org/standard/gml/" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/GOC
+:GOC rdf:type owl:NamedIndividual ,
+              :DataGovernanceBody ;
+     rdfs:label "Government of Canada" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/HTML
+:HTML rdf:type owl:NamedIndividual ,
+               :WebStandard ;
+      :isPublishedBy :W3C ;
+      rdfs:seeAlso "HyperText Markup Language and Cascading Style Sheets" ,
+                   "https://www.w3.org/standards/webdesign/htmlcss" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/IARPC
+:IARPC rdf:type owl:NamedIndividual ,
+                :DataCoordinationBody ,
+                :ObservingCoordinationBody ;
+       rdfs:label "Interagency Arctic Research Policy Committee" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/IASC
+:IASC rdf:type owl:NamedIndividual ,
+               :DataCoordinationBody ;
+      rdfs:label "International Arctic Science Committee" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ICOS
+:ICOS rdf:type owl:NamedIndividual ,
+               :ObservingProgram ;
+      rdfs:label "Integrated Carbon Observation System" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/IMO
+:IMO rdf:type owl:NamedIndividual ,
+              :GovernanceBody ,
+              :ShippingSafetyBody ;
+     rdfs:label "International Maritime Organization" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/INTAROS
+:INTAROS rdf:type owl:NamedIndividual ,
+                  :ObservingFramework ;
+         rdfs:label "Integrated Arctic Observation System" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ISO
+:ISO rdf:type owl:NamedIndividual ,
+              :DataStandardsBody ;
+     rdfs:label "International Organization for Standardiization" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ISO19115
+:ISO19115 rdf:type owl:NamedIndividual ,
+                   :MetadataStandard .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ITK
+:ITK rdf:type owl:NamedIndividual ,
+              :IndigenousGovernanceBody ,
+              :IndigenousResearchBody ;
+     rdfs:label "Inuit Tapiriit Kanatami" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/NISR
+:NISR rdf:type owl:NamedIndividual ,
+               :DataPrinciple ,
+               :ObservingPrinciple ;
+      rdfs:label "National Inuit Strategy on Research" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/NSERC
+:NSERC rdf:type owl:NamedIndividual ,
+                :DataFunder ,
+                :DataGovernanceBody ;
+       :isMemberOf :TriCouncil ;
+       rdfs:label "Natural Sciences and Engineering Research Council of Canada (NSERC)" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/NSF
+:NSF rdf:type owl:NamedIndividual ,
+              :DataFunder ,
+              :DataGovernanceBody ,
+              :DataPolicyBody ;
+     rdfs:label "National Science Foundation" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/NSFADC
+:NSFADC rdf:type owl:NamedIndividual ,
+                 :DataCenter ;
+        rdfs:label "National Science Foundation Arctic Data Center" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/NSIDC
+:NSIDC rdf:type owl:NamedIndividual ,
+                :DataCenter ;
+       rdfs:label "National Snow and Ice Data Center" ;
+       rdfs:seeAlso "https://nsidc.org" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/NetCDF
+:NetCDF rdf:type owl:NamedIndividual ;
+        rdfs:label "Network Common Data Form" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/OAI
+:OAI rdf:type owl:NamedIndividual ,
+              :PreservationStandard ;
+     rdfs:label "Open Archives Initiative" ;
+     rdfs:seeAlso "https://www.openarchives.org/" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/OAI-PMH
+:OAI-PMH rdf:type owl:NamedIndividual ,
+                  :InteroperabilityStandard ,
+                  :MetadataStandard ;
+         rdfs:label "Open Archives Initiative Protocol for Metadata Harvesting" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/OBPS
+:OBPS rdf:type owl:NamedIndividual ,
+               :DataPlatform ;
+      rdfs:label "Ocean Best Practices System" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/OGC
+:OGC rdf:type owl:NamedIndividual ,
+              :DataStandardsBody ;
+     rdfs:label "Open Geospatial Consortium" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/OWL
+:OWL rdf:type owl:NamedIndividual ,
+              :WebStandard ;
+     :isPublishedBy :W3C ;
+     rdfs:label "Web Ontology Language (OWL)" ;
+     rdfs:seeAlso "https://www.w3.org/OWL/" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/PAME
+:PAME rdf:type owl:NamedIndividual ,
+               :ObservingCoordinationBody ;
+      rdfs:label "Protection of the Arctic Marine Environment (Arctic Council working group)" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/POLDER
+:POLDER rdf:type owl:NamedIndividual ,
+                 :DataCoordinationBody ,
+                 :DataStandardsBody ;
+        rdfs:label "Polar Data Discovery Enhancement Research" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/PolartTEP
+:PolartTEP rdf:type owl:NamedIndividual ,
+                    :DataPlatform .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/RDA
+:RDA rdf:type owl:NamedIndividual ,
+              :DataCollaborationBody ,
+              :DataCoordinationBody ,
+              :DataStandardsBody ;
+     rdfs:label "Research Data Alliance" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/RDF
+:RDF rdf:type owl:NamedIndividual ,
+              :InteroperabilityStandard ,
+              :ReuseStandard ,
+              :WebStandard ;
+     :isPublishedBy :W3C ;
+     rdfs:label "Resource Description Framework" ;
+     rdfs:seeAlso "https://www.w3.org/RDF/" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/ROADS
+:ROADS rdf:type owl:NamedIndividual ,
+                :DataCoordinationBody ,
+                :ObservingCoordinationBody ;
+       rdfs:label "SAON Roadmap" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/SAON
+:SAON rdf:type owl:NamedIndividual ,
+               :ObservingFramework .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/SAV
+:SAV rdf:type owl:NamedIndividual ,
+              :EssentialVariable ;
+     rdfs:label "Shared Arctic Variable" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/SBA
+:SBA rdf:type owl:NamedIndividual ,
+              :ObservingPrinciple ;
+     rdfs:label "Societal Benefit Area" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/SCADM
+:SCADM rdf:type owl:NamedIndividual ,
+                :DataCoordinationBody ;
+       rdfs:label "Standing Committee on Antarctic Data Management" ;
+       rdfs:seeAlso "https://www.scar.org/resources/scadm/overview/" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/SDG
+:SDG rdf:type owl:NamedIndividual ,
+              :ObservingPrinciple ;
+     rdfs:label "Sustainable Development Goal" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/SOOS
+:SOOS rdf:type owl:NamedIndividual ,
+               :DataCoordinationBody .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/TriCouncil
+:TriCouncil rdf:type owl:NamedIndividual ,
+                     :DataGovernanceBody ;
+            rdfs:label "Canadian Tri-Counciil" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/UNESCO
+:UNESCO rdf:type owl:NamedIndividual ,
+                 :ObservingCoordinationBody ;
+        rdfs:label "United Nations Educational, Scientific and Cultural Organization" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/USAON
+:USAON rdf:type owl:NamedIndividual ,
+                :ObservingFramework ,
+                :ObservingProgram ;
+       rdfs:label "" ,
+                  "U.S. Arctic Observing Network" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/UnitedNations
+:UnitedNations rdf:type owl:NamedIndividual ,
+                        :GovernanceBody ;
+               rdfs:label "United Nations" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/W3C
+:W3C rdf:type owl:NamedIndividual ,
+              :DataStandardsBody ;
+     rdfs:label "World WIde Web Consortium" ;
+     rdfs:seeAlso "https://www.w3.org/" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/WCS
+:WCS rdf:type owl:NamedIndividual ,
+              :GeospatialDataStandard ,
+              :InteroperabilityStandard ;
+     rdfs:label "Web Coverage Service" .
+
+
+###  http://www.semanticweb.org/ppulsifer/ontologies/2023/4/CapardusFramework/WMO
+:WMO rdf:type owl:NamedIndividual ,
+              :ObservingCoordinationBody ;
+     rdfs:label "World Meteorological Organization" .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
