@@ -1,2 +1,14 @@
-# capardus
-This is the repo for the CAPARDUS project.
+#  Capacity-building in Arctic Standardisation Development (CAPARDUS)
+A Coordination and Support Action under H2020-LC-CLA-07-2019. Start date: 01 December 2019  End date: 31 May 2023
+_Coordinator: Stein Sandven, Nansen Environmental and Remote Sensing Center_
+
+## Objectives
+1. Establish a comprehensive framework for development, understanding and implementation of Arctic standards related to climate, environment and sustainable development;
+2. Identify and document common practices as basis for development of standardization, building on the Ocean Best Practice System (www.oceanbestpractices.org); and
+3. Engage communities active in the Arctic including research and services, Indigenous and local communities, commercial operators and governance bodies in defining Arctic Practice System
+
+## Abstract
+CAPARDUS is a CSA project under H2020 with focus on capacity-building to develop guidelines, standards and best practices related to exploitation of new technologies and utilization of data to support sustainable development in the Arctic. The capacity-building involve scientists, students, technology providers, economic actors, local communities, regulators and their organisations, who will participate in a series of workshops and research schools from 2020 to 2022. These events will be used as part of case studies in local communities in different regions, showing how the social-environmental systems are changing Arctic communities and what are the drivers for these changes. The climate change and its consequences in the Arctic leads to new requirements for planning and decision-making based on scientific and economic data, assessments and predictions. A prerequisite for good planning is access to data and information of relevance to the operators in the Arctic. The project will develop data management standards and best practices as a collaborative effort between scientists, local communities and other stakeholder groups, including economic actors who are interested in business development. Towards the end of the project CAPARDUS will provide recommendations for sustainable economic development in the Arctic, to the benefit of both local communities and other operators.
+
+## Project website
+Read more about the project on the [CAPARDUS website](https://capardus.nersc.no/).
